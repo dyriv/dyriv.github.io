@@ -1,2 +1,2 @@
-# dyrivWeb
-WebSite
+# dyriv.github.io
+WebSites
