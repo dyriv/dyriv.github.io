@@ -69,28 +69,33 @@ footer {
 
 img {
     max-width: 100%;
-    max-height: 100%;
-}
-
-.row {
-    margin-bottom: 3rem;
+    max-height: 34rem;
+    transition: all .5s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 
 /* Settings */
 .header {
     text-align: center;
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
     margin: 0 auto;
 }
+
 .freak-list {
-    
     .freak {
+        display: inline-block;
         overflow: hidden;
-        display: inline;
-        float: left;
         position: relative;
+        margin-bottom: 3rem;
+
+        &-img {
+            max-width: 100%;
+            max-height: 100%;
+        }
 
         a {
             text-decoration: none;
@@ -112,8 +117,14 @@ img {
             max-height: 18%;
             min-height: 18%;
             background: rgba(0, 0, 0, 0.5);
-            
         }
+        &:hover a {
+            transition: opacity .5s linear;
+            opacity: 1;
+            z-index: 1;
+
+        } /* show nickname */
+
         #yt {
             &_link {
                 .reg();
@@ -128,21 +139,28 @@ img {
                 left: 75%;
                 bottom: -1%;
                 background: none;
-
             }
+        } /* #yt */
+        
+    } /* freak */
+}
+@media (max-width: 991px) {
+    .header {
+        width: 80%;
+        height: 80%;
+    }
+
+    .freak-list {
+        .freak {
+            margin: 0 auto;
         }
-        &:hover a {
-            transition: opacity .5s linear;
-            opacity: 1;
-            z-index: 1;
+    }
+}
+@media (max-width: 767px) {
 
-        } /* show nickname */
-
-        img {
-            transition: all .5s ease;
-            &:hover {
-                transform: scale(1.1);
-            }
-        } /* scale img */
+    .freak-list {
+        .freak {
+            margin: 1.2rem auto;
+        }
     }
 }
